@@ -65,7 +65,7 @@ if prompt := st.chat_input("Enter your text for revision or ask a question about
             st.session_state.messages.append(message)
     else:
         response = client.completions.create(
-            model="text-davinci-003",
+            model="gpt-3.5-turbo",
             prompt=prompt,
             temperature=0.7,
             max_tokens=1024,
